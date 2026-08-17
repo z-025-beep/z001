@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>泸溪县地理与文化互动课件</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-dot"></span>
+          <span class="brand-text">泸溪县地理与文化交互课件</span>
+        </div>
+        <div class="topbar-stage" id="topbarStage" aria-label="当前站点"></div>
+      </header>
+
+      <main class="main-panel">
+        <section class="map-card">
+          <img class="reference-map" src="底图.jpg" alt="泸溪县地图底图" draggable="false" />
+          <div class="route-badge hidden" id="routeBadge" aria-live="polite"></div>
+
+          <div class="hotspot-layer" aria-label="热点层">
+            <button class="map-point point-a" data-name="潭溪镇"></button>
+            <button class="map-point point-b" data-name="武溪镇"></button>
+            <button class="map-point point-c" data-name="浦市镇·文物"></button>
+            <button class="map-point point-c2" data-name="浦市镇·红色"></button>
+            <button class="map-point point-d" data-name="达岚镇"></button>
+            <button class="map-point point-e" data-name="沅江"></button>
+            <button class="map-point point-f" data-name="周边县域"></button>
+            <button class="map-point point-g" data-name="洗溪镇"></button>
+            <button class="map-point point-h" data-name="白羊溪乡"></button>
+          </div>
+
+          <div class="quiz-panel hidden" id="quizPanel">
+            <div class="quiz-header">
+              <span class="quiz-tag" id="quizTypeBadge">单选题</span>
+              <span class="quiz-counter" id="quizCounter">1 / 10</span>
+            </div>
+
+            <h3 class="quiz-question" id="quizQuestion">题目待补充</h3>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-result" id="quizResult"></div>
+
+            <div class="quiz-actions">
+              <button class="slide-btn" id="quizPrev" type="button">上一题</button>
+              <button class="slide-btn primary" id="quizSubmit" type="button">提交</button>
+              <button class="slide-btn" id="quizNext" type="button">下一题</button>
+            </div>
+          </div>
+
+          <aside class="info-card">
+            <div class="info-card-title" id="infoTitle"></div>
+            <p id="infoText">
+              泸溪县位于湘西北，地形南高北低，山地与河谷交错，沅江和武水构成区域水系脉络，城镇多分布于高低地势过渡带。
+            </p>
+          </aside>
+        </section>
+
+        <footer class="bottom-bar">
+          <div class="nav-group">
+            <button class="nav-btn" id="prevBtn">上一站</button>
+            <button class="nav-btn" id="nextBtn">下一站</button>
+            <button class="nav-btn muted" id="pauseBtn">暂停</button>
+            <button class="nav-btn danger" id="endBtn">结束</button>
+          </div>
+
+          <div class="progress-wrap">
+            <span class="progress-text" id="progressLabel">1 / 6</span>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressBar"></div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal" id="detailModal">
+      <div class="modal-card">
+        <button class="modal-close" id="closeModal">×</button>
+
+        <div class="modal-header">
+          <h3 id="modalTitle">武溪镇</h3>
+          <span class="modal-badge">热点介绍</span>
+        </div>
+
+        <div class="modal-layout">
+          <div class="panel-box image-box" id="modalImageBox">
+            <img id="modalImage" alt="热点图片" />
+            <span class="image-empty" id="imageEmptyText">图片展示空位</span>
+          </div>
+          <div class="panel-box text-box">
+            <h4>文物介绍</h4>
+            <p id="modalText">
+              这里用于展示该地点的详细介绍文字。后续可补充文物名称、历史背景、年代信息和空间特征，当前为占位内容框架。
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="slide-btn" id="modalPrev">上一条</button>
+          <button class="slide-btn primary" id="modalNext">下一条</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
